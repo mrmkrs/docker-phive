@@ -1,11 +1,12 @@
-<img src="https://img.shields.io/docker/pulls/marcel0000/phive">
-<img src="https://img.shields.io/docker/automated/marcel0000/phive">
+<img src="https://img.shields.io/docker/pulls/marcel0000/phive"> <img src="https://img.shields.io/docker/automated/marcel0000/phive">
 
 # Introduction
 This repository allows you to use phive in a docker image.
 To use phive, add volume mounts to the following paths:
 * /phive/phive.xml 
 * /phive/tools
+
+See https://hub.docker.com/r/marcel0000/phive
 
 ## Example
 `docker run --rm -u $(id -u):$(id -g) -v /path/to/phive.xml:/phive/phive.xml -v /path/to/tools:/phive/tools -v /tmp/.phive:/phive/.phive marcel0000/phive:latest phive install`
