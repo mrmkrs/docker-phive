@@ -9,7 +9,7 @@ To use phive, add volume mounts to the following paths:
 See https://hub.docker.com/r/marcel0000/phive
 
 ## Example
-`docker run --rm -u $(id -u):$(id -g) -v /path/to/phive.xml:/phive/phive.xml -v /path/to/tools:/phive/tools -v /tmp/.phive:/phive/.phive marcel0000/phive:latest phive install`
+`docker run --rm -u $(id -u):$(id -g) -v /path/to/phive.xml:/phive/phive.xml -v /path/to/tools:/phive/tools -v marcel0000/phive:latest phive install`
 
 ## Caching
 To preseve downloaded phars accros CI builds, mount an additional folder and setup the HOME directory:
@@ -23,4 +23,4 @@ Example for trusting phpunit:
 
 `docker run marcel0000/phive:latest phive install --trust-gpg-keys 4AA394086372C20A`
 
-The keys to accept are printed when running `phive install`
+The keys to accept are printed when running `phive install`, but you should double check them yourself :-)
